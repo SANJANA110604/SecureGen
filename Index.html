@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Password Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-key"></i>SecureGen</h1>
+            <p class="subtitle">Create strong, secure passwords</p>
+        </header>
+
+        <div class="main-content">
+            <section class="generator-section">
+                <h2><i class="fas fa-sliders-h"></i> Password Options</h2>
+                <div class="options">
+                    <div class="option-group">
+                        <label for="length"><i class="fas fa-ruler"></i> Password Length</label>
+                        <input type="number" id="length" min="6" max="50" value="12">
+                    </div>
+                    <div class="option-group">
+                        <label for="quantity"><i class="fas fa-copy"></i> Number of Passwords</label>
+                        <input type="number" id="quantity" min="1" max="10" value="1">
+                    </div>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="uppercase" checked>
+                    <label for="uppercase">Include Uppercase Letters (A-Z)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="lowercase" checked>
+                    <label for="lowercase">Include Lowercase Letters (a-z)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="numbers" checked>
+                    <label for="numbers">Include Numbers (0-9)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="symbols" checked>
+                    <label for="symbols">Include Symbols (!@#$%^&*)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="exclude-similar">
+                    <label for="exclude-similar">Exclude Similar Characters (i, l, 1, L, o, 0, O)</label>
+                </div>
+            </section>
+
+            <section class="password-display">
+                <h2><i class="fas fa-lock"></i> Generated Password</h2>
+                <div class="password-output">
+                    <input type="text" id="password" readonly placeholder="Your password will appear here...">
+                </div>
+                
+                <div class="buttons">
+                    <button class="generate-btn" id="generate">
+                        <i class="fas fa-bolt"></i> Generate Password
+                    </button>
+                    <button class="copy-btn" id="copy">
+                        <i class="far fa-copy"></i> Copy
+                    </button>
+                    <button class="reset-btn" id="reset">
+                        <i class="fas fa-redo"></i> Reset
+                    </button>
+                    <button class="save-btn" id="save">
+                        <i class="far fa-save"></i> Save
+                    </button>
+                </div>
+                
+                <div class="strength-meter">
+                    <div class="strength-text">
+                        <span>Password Strength:</span>
+                        <span id="strength-label">None</span>
+                    </div>
+                    <div class="meter-bar">
+                        <div id="strength-bar"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="history-section">
+                <h2><i class="fas fa-history"></i> Password History</h2>
+                <ul class="history-list" id="history-list">
+                    <!-- History items will be added here dynamically -->
+                </ul>
+                <div id="empty-history" class="empty-history">No passwords generated yet. Generate your first password!</div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>Mini Project: Password Generator | Combining HTML, CSS, JavaScript, and Python</p>
+        <div class="tech-badges">
+            <span class="badge">HTML5</span>
+            <span class="badge">CSS3</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">Python (Flask)</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

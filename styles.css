@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #e6e6e6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background-color: rgba(25, 25, 35, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    padding: 2.5rem;
+    margin-top: 1rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+h1 {
+    font-size: 2.8rem;
+    background: linear-gradient(90deg, #00dbde, #fc00ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #aaa;
+    margin-bottom: 1.5rem;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.generator-section, .password-display, .history-section {
+    background-color: rgba(40, 40, 55, 0.7);
+    border-radius: 15px;
+    padding: 1.8rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+    color: #4cc9f0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.option-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-weight: 600;
+    color: #b8b8d1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+input[type="number"] {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #555;
+    background-color: #2a2a3a;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #6c63ff;
+}
+
+.password-output {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#password {
+    flex: 1;
+    padding: 1.2rem;
+    background-color: #2a2a3a;
+    border: 2px solid #444;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-family: 'Courier New', monospace;
+    color: #fff;
+    letter-spacing: 1px;
+    word-break: break-all;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+button {
+    padding: 0.9rem 1.8rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.generate-btn {
+    background: linear-gradient(90deg, #6c63ff, #8a84ff);
+    color: white;
+    flex: 1;
+}
+
+.copy-btn {
+    background-color: #2a9d8f;
+    color: white;
+}
+
+.reset-btn {
+    background-color: #e76f51;
+    color: white;
+}
+
+.save-btn {
+    background-color: #f4a261;
+    color: white;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.3);
+}
+
+.strength-meter {
+    margin-top: 1.5rem;
+}
+
+.strength-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+#strength-label {
+    font-weight: bold;
+}
+
+.meter-bar {
+    height: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#strength-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #e63946;
+    border-radius: 5px;
+    transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+.history-list {
+    list-style-type: none;
+    max-height: 200px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.history-list li {
+    background-color: rgba(50, 50, 70, 0.6);
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.8rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid #6c63ff;
+}
+
+.history-list li:hover {
+    background-color: rgba(60, 60, 80, 0.8);
+}
+
+.history-password {
+    font-family: 'Courier New', monospace;
+    letter-spacing: 1px;
+}
+
+.history-time {
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+.empty-history {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 1.5rem;
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    color: #777;
+    font-size: 0.9rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #444;
+    width: 100%;
+}
+
+.tech-badges {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background-color: #333;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .password-output {
+        flex-direction: column;
+    }
+    
+    .options {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Password strength colors */
+.strength-weak {
+    background-color: #e63946 !important;
+    width: 25% !important;
+}
+
+.strength-fair {
+    background-color: #f4a261 !important;
+    width: 50% !important;
+}
+
+.strength-good {
+    background-color: #2a9d8f !important;
+    width: 75% !important;
+}
+
+.strength-strong {
+    background-color: #4caf50 !important;
+    width: 100% !important;
+}
