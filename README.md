@@ -1,6 +1,6 @@
-# 🔐 SecureGen - Secure Password Generator
+# 🔐 SecureGen - Password Generator
 
-A modern password generator built with Python Flask, HTML5, CSS3, and JavaScript. This is my engineering project featuring a beautiful responsive interface and advanced security features.
+A modern password generator built with Python Flask, HTML5, CSS3, and JavaScript. This is my engineering student project featuring a beautiful responsive interface and advanced security features.
 
 ## ✨ Features
 
@@ -147,7 +147,6 @@ securegen-pro/
 
 ---
 
-
+**Built with ❤️ by an Engineering Student**
 
 *SecureGen - My Password Generator Project*
-
