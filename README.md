@@ -50,8 +50,8 @@ Before running this application, make sure you have:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/SANJANA110604/securegen.git
-   cd securegen-pro
+   git clone https://github.com/Sanjana152911/securegen.git
+   cd securegen
    ```
 
 2. **Create a virtual environment (recommended):**
@@ -145,10 +145,7 @@ securegen-pro/
 └── requirements.txt      # Python dependencies
 ```
 
----
-
-**Built with ❤️ by an Engineering Student**
-
 *SecureGen - My Password Generator Project*
+
 
 
