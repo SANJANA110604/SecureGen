@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureGen Pro | Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔐</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>SecureGen <span class="pro-badge">PRO</span></h1>
+                    <p class="tagline">Advanced Password Security Suite</p>
+                </div>
+            </div>
+            <div class="theme-toggle">
+                <button id="theme-toggle" class="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Documentation Content -->
+            <section class="card">
+                <div class="card-header">
+                    <i class="fas fa-book"></i>
+                    <h2>Documentation</h2>
+                </div>
+
+                <div class="card-body">
+                    <div class="doc-content">
+                        <h3><i class="fas fa-info-circle"></i> About SecureGen</h3>
+                        <p>A modern password generator built with Python Flask, HTML5, CSS3, JavaScript and Python/Flask. This is an engineering project featuring a beautiful responsive interface and advanced security features.</p>
+
+                        <h3><i class="fas fa-star"></i> Features</h3>
+
+                        <h4>🔒 Advanced Security</h4>
+                        <ul>
+                            <li><strong>Cryptographically Secure Generation:</strong> Uses Python's <code>secrets</code> module for true randomness</li>
+                            <li><strong>Multiple Character Sets:</strong> Uppercase, lowercase, numbers, symbols, and custom characters</li>
+                            <li><strong>Sensible Passwords:</strong> Generates memorable passwords with word-like structures (e.g., "Blue42River", "Quick157er")</li>
+                            <li><strong>Password Strength Analysis:</strong> Real-time strength scoring and detailed analysis</li>
+                            <li><strong>Advanced Options:</strong> Exclude similar characters, prevent duplicates, avoid sequential patterns</li>
+                        </ul>
+
+                        <h4>🎨 Modern UI/UX</h4>
+                        <ul>
+                            <li><strong>Responsive Design:</strong> Works perfectly on desktop, tablet, and mobile devices</li>
+                            <li><strong>Dark/Light Theme:</strong> Toggle between themes with smooth animations</li>
+                            <li><strong>Real-time Preview:</strong> See password strength and characteristics as you configure</li>
+                            <li><strong>Interactive Controls:</strong> Clickable character set options with visual feedback</li>
+                            <li><strong>Toast Notifications:</strong> User-friendly success/error messages</li>
+                        </ul>
+
+                        <h4>📊 Analytics & History</h4>
+                        <ul>
+                            <li><strong>Password History:</strong> Save and manage generated passwords</li>
+                            <li><strong>Statistics Dashboard:</strong> Track total passwords generated and strong password count</li>
+                            <li><strong>Strength Meter:</strong> Visual representation of password security levels</li>
+                            <li><strong>Detailed Analysis:</strong> Character variety, entropy calculation, pattern detection</li>
+                        </ul>
+
+                        <h4>🚀 Performance</h4>
+                        <ul>
+                            <li><strong>Client-side Generation:</strong> All passwords generated locally in your browser</li>
+                            <li><strong>No Data Storage:</strong> Your passwords never leave your device</li>
+                            <li><strong>Fast & Lightweight:</strong> Optimized for speed and minimal resource usage</li>
+                        </ul>
+
+                        <h3><i class="fas fa-tools"></i> Technologies Used</h3>
+                        <ul>
+                            <li><strong>Backend:</strong> Python 3.7+, Flask 2.0+</li>
+                            <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript (ES6+)</li>
+                            <li><strong>Styling:</strong> Custom CSS with CSS Variables for theming</li>
+                            <li><strong>Icons:</strong> Font Awesome 6.4.0</li>
+                            <li><strong>Fonts:</strong> Google Fonts (Poppins, JetBrains Mono)</li>
+                            <li><strong>Security:</strong> Python <code>secrets</code> module for cryptographic security</li>
+                        </ul>
+
+                        <h3><i class="fas fa-list-check"></i> Prerequisites</h3>
+                        <p>Before running this application, make sure you have:</p>
+                        <ul>
+                            <li>Python 3.7 or higher installed</li>
+                            <li>pip (Python package manager)</li>
+                            <li>A modern web browser (Chrome, Firefox, Safari, Edge)</li>
+                        </ul>
+
+                        <h3><i class="fas fa-rocket"></i> Installation</h3>
+                        <ol>
+                            <li><strong>Clone the repository:</strong>
+                                <pre><code>git clone https://github.com/Sanjana152911/securegen.git
+cd securegen</code></pre>
+                            </li>
+                            <li><strong>Create a virtual environment (recommended):</strong>
+                                <pre><code>python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate</code></pre>
+                            </li>
+                            <li><strong>Install dependencies:</strong>
+                                <pre><code>pip install flask flask-cors</code></pre>
+                            </li>
+                            <li><strong>Run the application:</strong>
+                                <pre><code>python app.py</code></pre>
+                            </li>
+                            <li><strong>Open your browser and navigate to:</strong>
+                                <pre><code>http://localhost:5000</code></pre>
+                            </li>
+                        </ol>
+
+                        <h3><i class="fas fa-play"></i> Usage</h3>
+
+                        <h4>Basic Password Generation</h4>
+                        <ol>
+                            <li><strong>Set Password Length:</strong> Use the length slider (8-32 characters)</li>
+                            <li><strong>Select Character Sets:</strong> Click on the character set options you want to include:
+                                <ul>
+                                    <li>🔤 Uppercase letters (A-Z)</li>
+                                    <li>🔡 Lowercase letters (a-z)</li>
+                                    <li>🔢 Numbers (0-9)</li>
+                                    <li>🔣 Symbols (!@#$%^&*)</li>
+                                    <li>🎯 Custom characters (define your own)</li>
+                                </ul>
+                            </li>
+                            <li><strong>Set Quantity:</strong> Choose how many passwords to generate (1-20)</li>
+                            <li><strong>Click "Generate Passwords":</strong> Your secure passwords will appear instantly</li>
+                        </ol>
+
+                        <h4>Advanced Options</h4>
+                        <ul>
+                            <li><strong>Exclude Similar Characters:</strong> Removes confusing characters like 'i', 'l', '1', 'O', '0'</li>
+                            <li><strong>No Duplicates:</strong> Ensures no repeated characters in the password</li>
+                            <li><strong>Avoid Sequential Patterns:</strong> Prevents patterns like 'abc', '123', etc.</li>
+                            <li><strong>Pronounceable:</strong> Generates easier-to-remember passwords</li>
+                        </ul>
+
+                        <h4>Managing Generated Passwords</h4>
+                        <ul>
+                            <li><strong>Copy Individual Passwords:</strong> Click the copy icon next to each password</li>
+                            <li><strong>Copy All Passwords:</strong> Use the "Copy All" button to copy all generated passwords</li>
+                            <li><strong>Save to History:</strong> Click the save icon to store passwords for later reference</li>
+                            <li><strong>Clear Results:</strong> Remove all generated passwords from the current session</li>
+                        </ul>
+
+                        <h4>Theme Switching</h4>
+                        <p>Click the moon/sun icon in the top-right corner to toggle between light and dark themes.</p>
+
+                        <h3><i class="fas fa-code"></i> API Reference</h3>
+                        <p>The Flask backend provides the following API endpoints:</p>
+                        <ul>
+                            <li><code>GET /</code> - Serve the main application</li>
+                            <li><code>POST /generate</code> - Generate passwords (accepts JSON with parameters)</li>
+                            <li><code>GET /history</code> - Retrieve password history</li>
+                            <li><code>POST /analyze</code> - Analyze password strength</li>
+                            <li><code>DELETE /history</code> - Clear password history</li>
+                        </ul>
+
+                        <h4>Example API Usage</h4>
+                        <pre><code>import requests
+
+# Generate passwords
+response = requests.post('http://localhost:5000/generate', json={
+    'length': 16,
+    'quantity': 5,
+    'use_uppercase': True,
+    'use_lowercase': True,
+    'use_numbers': True,
+    'use_symbols': True
+})
+
+passwords = response.json()['passwords']</code></pre>
+
+                        <h3><i class="fas fa-folder-tree"></i> Project Structure</h3>
+                        <pre><code>securegen-pro/
+├── app.py                 # Flask backend server
+├── Index.html            # Main HTML page
+├── script.js             # Frontend JavaScript logic
+├── style.css             # CSS styling and themes
+├── README.md             # Project documentation
+└── requirements.txt      # Python dependencies</code></pre>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>SecureGen</h3>
+                    <p>Advanced password security powered by modern cryptography</p>
+                    <div class="footer-links">
+                        <a href="https://github.com/Sanjana152911/securegen"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="documentation.html"><i class="fas fa-book"></i> Documentation</a>
+                        <a href="security.html"><i class="fas fa-shield-alt"></i> Security</a>
+                    </div>
+                </div>
+
+                <div class="tech-stack">
+                    <h4>Built With</h4>
+                    <div class="tech-badges">
+                        <span class="tech-badge html"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="tech-badge css"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        <span class="tech-badge js"><i class="fab fa-js-square"></i> JavaScript</span>
+                        <span class="tech-badge py"><i class="fab fa-python"></i> Python</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 SecureGen. All rights reserved. | <span id="current-year">2024</span></p>
+                <p class="disclaimer">This tool generates passwords locally in your browser. No data is sent to any server.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="theme.js"></script>
+</body>
+</html>
